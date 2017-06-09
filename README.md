@@ -4,3 +4,6 @@
 ### 2017.06.09
 + Create git repository.
 + Clone in local.
++ Django Setup.
++ Bootstrap Setup.
+
