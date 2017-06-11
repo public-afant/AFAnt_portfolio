@@ -1,9 +1,56 @@
 <!-- blog/info.html -->
 
 {% extends "blog/layout.html" %}
-
-
 {% block content %}
-<h1> info.html 파일 입니다. </h1>
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'blog/info_style.css' %}" /> 
+
+{% for info in info_list %}
+    <div class="container info_main">
+        <div class="row info_list">
+            <div class="info_name">
+                <h2>{{ info.name_kr }}</h2>
+                <h3>{{ info.name_eng }}</h3>
+                <h4>{{ info.email }}</h4> 
+                <h5>{{ info.location }}</h5>
+            </div>
+        </div>
+        <div class="row info_list info_career"> <!-- 경력 -->
+            <div class="col-xs-4 col-md-4 info_sub">
+                <h4>경험</h4>
+            </div>
+            <div class="col-xs-8 col-md-8 info_sub info_sub_con">
+                <h6> {{ info.career | linebreaks }} </h6>
+            </div>
+        </div>
+        <div class="row info_list info_sophomore"> <!-- 학력 -->
+            <div class="col-xs-4 col-md-4 info_sub">
+                <h4>학력</h4>
+            </div>
+            <div class="col-xs-8 col-md-8 info_sub info_sub_con">
+                <h6> {{ info.sophomore | safe | linebreaksbr }} </h6>
+            </div>
+        </div>
+        <div class="row info_list info_cert"> <!-- 자격증 -->
+            <div class="col-xs-4 col-md-4 info_sub">
+                <h4>자격증</h4>
+            </div>
+            <div class="col-xs-8 col-md-8 info_sub info_sub_con">
+                <h6> {{ info.cert | safe | linebreaksbr }} </h6>
+            </div>
+        </div>
+        <div class="row info_list info_skill"> <!-- 기술 -->
+            <div class="col-xs-4 col-md-4 info_sub">
+                <h4>기술</h4>
+            </div>
+            <div class="col-xs-8 col-md-8 info_sub info_sub_con">
+                {{ info.skill  | safe  }}
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
 
 {% endblock %}
+

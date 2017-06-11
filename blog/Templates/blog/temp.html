@@ -1,0 +1,121 @@
+
+
+<style>
+
+    .info_defalt {
+        font-size: 15px;
+    }
+    .name_kr {
+        font-size: 25px;
+        text-align: center;
+    }
+    .name_eng {
+        font-size: 18px;
+    }
+    .table{
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        
+    }
+</style>
+
+
+<div class="test ">
+    <div class="container table-responsive">
+        <table class="table table-hover table-bordered ">
+            <tr>
+                <td colspan="2">
+                    <span class="name_kr info_defalt">{{info.name_kr}}</span><br>
+                    <span class="name_eng info_defalt">{{info.name_eng}}</span><br>
+                    <span class="info_defalt">{{info.email}}<br>
+                    {{info.location}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td >경력</td>
+                <td>{{info.career}}</td>
+            </tr>
+            <tr>
+                <td>학력</td>
+                <td>{{info.sophomore}} {{STATIC_URL }}</td>
+            </tr>
+            <tr>
+                <td>자격증</td>
+                <td>{{info.cert}}</td>
+            </tr>
+            <tr>
+                <td>기술</td>
+                <td>{{info.skill}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+<!-- -------------------- -->
+
+
+<style>
+    h2, h3, h4 {
+        margin: auto;
+    }
+    .info_detail {
+        display: table;
+        border: 1px;
+        border-color: #ffffff;
+    }
+    .info_list .sub{
+        border-bottom: none;
+        width: 50px;
+        text-align: left;
+        display: table-row;
+        font-size: 20px;
+    }
+    .info_list li {
+        width: 500px;
+        vertical-align: top;
+        margin-bottom: 20px;
+        display: table-cell;
+        
+
+    }
+    .info_name {
+        padding: 30px;
+        padding-left: auto;
+        padding-right: auto; 
+    }
+    .info_main {
+        width: 700px;
+        min-height: 3000px;
+        margin-top: 300px;
+        margin-left: 8%;
+        margin-bottom: 100px;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.8);
+        
+    }
+
+</style>
+    {% for info in info_list %}
+
+    <div class="info_main container">
+        <div class="info_name">
+            <h2>{{ info.name_kr }}</h2>
+            <h3>{{ info.name_eng }}</h3>
+            <h4>{{ info.email }} <br> {{ info.location }}</h4>
+        </div>
+        <div class="info_detail">
+            <ul class="info_list">
+                <li class="sub">경력</li>
+                <li>{{ info.career }}</li>
+                <li class="sub">학력</li>
+                <li>{{info.sophomore}}</li>
+                <li class="sub">자격증</li>
+                <li>{{info.cert}}</li>
+                <li class="sub">기술</li>
+                <li>{{info.skill}}</li>
+            </ul>
+        </div>
+    </div>

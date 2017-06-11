@@ -1,7 +1,9 @@
 <!doctype html>
+
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %} AFAnt's Portfolio {% endblock %}</title>
     {#<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />#}
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css" />
@@ -9,7 +11,7 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
         body {
-            padding-top: 35px;
+            padding-top: 70px;
         }
         .str_af {
             font-size: 120%;
@@ -21,6 +23,12 @@
         }
         .container-fluid {
             margin: auto;
+        }
+        footer{
+            padding: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
         }
     </style>
 
@@ -35,16 +43,17 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="../home">
+                <!-- AF -> AutoFocus & A Free -->
                     <span class="str_af">AF</span><span class="str_ant">ANT</span>
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="../home">HOME <span class="sr-only">(current)</span></a></li>
+                    <li class="active"><a href="../home"> HOME<span class="sr-only">(current)</span></a></li>
                     <li><a href="../info">INFO</a></li>
                     <li><a href="../portfolio">PORTFOLIO</a></li>
-                    <li><a href="../video">VIDEO</a></li>
+                    <li><a href="../video"></span> VIDEO</a></li>
                     <li><a href="../contact">CONTACT</a></li>
 
                     <!--
@@ -70,7 +79,14 @@
 </head>
 <body>
     {% block content %}
+
     {% endblock %}
+
+    <footer> 
+        wh9721@gmail.com<br>
+        AFANT &copy; 2017
+    </footer>
+
 </body>
 </html>
 

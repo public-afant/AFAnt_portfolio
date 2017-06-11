@@ -1,0 +1,65 @@
+body {
+    background: url("images/music_2.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover; 
+}
+    h1,h2,h3,h4,h5,h6 {
+        margin: auto;
+    }
+    .info_main{
+        max-width: 700px;
+        min-width: 380px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding-bottom: 20px;
+    }
+    .info_list {
+        width: 90%;
+        /* background-color: rgba(255, 255, 255, 0.8); */
+        margin: auto;
+        margin-top: 20px;
+        border-bottom: 1px solid rgb(255, 255, 255);
+    }
+    .info_sub {
+        max-width: 100px;
+        max-height: 40%;
+        /* background-color: rgba(100, 255, 255, 0.8); */
+        margin: auto;
+        margin-top: 5px;
+        margin-right: 20px;
+    }
+    .info_sub_con {
+        max-width: none;
+        width: 70%;
+        min-width: 300px;
+        height: auto;
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-right: none;
+    }
+    .info_name {
+        height: auto;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: right;
+    }
+    .info_career {
+        height: 100px;
+    }
+    .info_sophomore {
+        height: 200px;
+    }
+    .info_cert{
+        height: 240px;
+    }
+    .info_skill {
+        height: 350px;
+    }
+    .info_skill_detail p {
+        margin-left: 10px;
+        margin-bottom: 5px;
+        padding: 0px;
+    }

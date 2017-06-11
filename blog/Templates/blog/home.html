@@ -1,9 +1,10 @@
 <!-- blog/home.html -->
 
 {% extends "blog/layout.html" %}
-
-
 {% block content %}
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" /> 
 <h1> home.html 파일 입니다. </h1>
 
 {% endblock %}
