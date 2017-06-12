@@ -7,3 +7,17 @@
 + Django Setup.
 + Bootstrap Setup.
 
+### 2017.06.10
++ Create info page.
++ Create home page.
+
+### 2017.06.11
++ Modify info page.
++ Modify home page.
+
+### 2017.06.12
++ Create contact page.
++ CSS file test.
+
+
+
