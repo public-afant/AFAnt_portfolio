@@ -16,4 +16,5 @@ def video(request):
     return render(request,'blog/video.html')
 
 def contact(request):
-    return render(request,'blog/contact.html')
+    info_list = Info.objects.all()
+    return render(request,'blog/contact.html',{'info_list' : info_list})

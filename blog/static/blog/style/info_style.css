@@ -1,5 +1,5 @@
 body {
-    background: url("images/music_2.jpg") no-repeat center center fixed;
+    background: url("../images/music_2.jpg") no-repeat center center fixed;
     -webkit-background-size: cover; 
     -moz-background-size: cover; 
     -o-background-size: cover; 
@@ -50,7 +50,7 @@ body {
         height: 100px;
     }
     .info_sophomore {
-        height: 200px;
+        height: 190px;
     }
     .info_cert{
         height: 240px;
