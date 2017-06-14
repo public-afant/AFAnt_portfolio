@@ -119,3 +119,16 @@
             </ul>
         </div>
     </div>
+
+
+
+
+    <div class="container">
+    <div class="row test1 ">
+        {% for video in video_list %}
+            <div class="col-xs-6 col-sm-4 col-md-4 test">
+                {{ video.video_title }}
+            </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,9 +1,67 @@
 <!-- blog/video.html -->
 
 {% extends "blog/layout.html" %}
-
-
 {% block content %}
-<h1> video.html 파일 입니다. </h1>
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'blog/style/video_style.css' %}" /> 
+
+<script>
+    function test(key){        
+        var vi_key;
+
+        var vimeo_json = "https://vimeo.com/api/v2/video/"+key+".json";
+        $.ajax({ 
+        url: vimeo_json, 
+        async:false,
+        dataType: "json" 
+        }).done(function (data){ 
+            vi_key = data[0]['thumbnail_large']; 
+        }).fail(function (data) { 
+            alert('Vimeo Error'); 
+        });             
+        return vi_key;
+    }
+</script>
+
+<style>
+    .img_test{
+        width: 100%;
+    }
+    .thumbnail{
+        margin: 4px;
+    }
+    .video_list:hover{
+        background-color: rgba(200, 200, 200, 0.8);
+    }
+</style>
+
+
+<div class="container">
+    <div class="row video_box">
+            {% for video in video_list %}
+                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 video_list">
+                    <a href="https://player.vimeo.com/video/{{ video.video_key }}" target="_blink" class="thumbnail test">
+                            <script>
+                               document.write("<img src="+test('{{ video.video_key }}')+" class='img-rounded img_test'>");
+                            </script>
+                    </a> 
+                    <h5>{{ video.video_title }}</h5>
+                    <p>{{ video.video_content }}</p>
+                </div>
+            {% endfor %}
+    </div>
+</div>
+
 
 {% endblock %}
+
+<!--
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/221218190?title=0&byline=0&portrait=0"></iframe>
+</div>
+
+http://vimeo.com/api/v2/video/{key_id}.xml
+-->
+
+

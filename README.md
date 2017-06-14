@@ -19,5 +19,14 @@
 + Create contact page.
 + CSS file test.
 
+### 2017.06.13
++ Modify contact page.
++ Create video page.
+
+### 2017.06.14
++ Make gallery form.
++ Vimeo API Test.
+
+
 
 
