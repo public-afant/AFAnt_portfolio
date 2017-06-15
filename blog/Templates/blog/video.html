@@ -24,12 +24,9 @@
         var scroll_result = $(window).scrollTop();
         var video_top = (scroll_result+60);
         $(".layer").css('top',video_top+'px');
-        console.log("layer_scroll 호출!");
-        alert(video_top);
     }
     function video_rm(){
         $('body').find(".layer").remove();
-        console.log("video_rm click!");
     }
     function video_tag(key){
         video_rm();
