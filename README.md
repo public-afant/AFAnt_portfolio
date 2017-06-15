@@ -29,6 +29,7 @@
 
 ### 2017.06.15
 + Modify home page design.
-
++ Deploy as heroku.
++ Restore data.
 
 
