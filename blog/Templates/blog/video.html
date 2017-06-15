@@ -5,8 +5,42 @@
 {% load staticfiles %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'blog/style/video_style.css' %}" /> 
-
+<style>
+    .layer {
+        width: 80%;
+        position: absolute;
+        top:60px;
+        background: rgba(0, 0, 0, 0.8);
+        border: 2px solid white;
+    }
+    .button_img {
+        width: 15px;
+        margin: 15px;
+        align-content: right;
+    }
+</style>
 <script>
+    function layer_scroll(){
+        var scroll_result = $(window).scrollTop();
+        var video_top = (scroll_result+60);
+        $(".layer").css('top',video_top+'px');
+        console.log("layer_scroll 호출!");
+        alert(video_top);
+    }
+    function video_rm(){
+        $('body').find(".layer").remove();
+        console.log("video_rm click!");
+    }
+    function video_tag(key){
+        video_rm();
+        
+        var video_url = "https://player.vimeo.com/video/"+key;
+        $('body').append('<div class="container"><div class="layer"><input type="image" src="{% static "blog/images/close.png" %}"'+
+        ' onclick="javascript:video_rm(); " class="button_img" /><br> <div class="embed-responsive embed-responsive-16by9"> '+
+            '<iframe class="embed-responsive-item" src='+video_url+'></iframe></div></div></div>');
+        layer_scroll();
+    }
+
     function test(key){        
         var vi_key;
 
@@ -24,24 +58,13 @@
     }
 </script>
 
-<style>
-    .img_test{
-        width: 100%;
-    }
-    .thumbnail{
-        margin: 4px;
-    }
-    .video_list:hover{
-        background-color: rgba(200, 200, 200, 0.8);
-    }
-</style>
 
 
 <div class="container">
     <div class="row video_box">
             {% for video in video_list %}
                 <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 video_list">
-                    <a href="https://player.vimeo.com/video/{{ video.video_key }}" target="_blink" class="thumbnail test">
+                    <a href="javascript:;" onclick="video_tag('{{ video.video_key }}');" target="_blink" class="thumbnail test">
                             <script>
                                document.write("<img src="+test('{{ video.video_key }}')+" class='img-rounded img_test'>");
                             </script>
@@ -60,6 +83,8 @@
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/221218190?title=0&byline=0&portrait=0"></iframe>
 </div>
+
+"https://player.vimeo.com/video/{{ video.video_key }}"
 
 http://vimeo.com/api/v2/video/{key_id}.xml
 -->

@@ -1,7 +1,7 @@
 
     html, body{
         height: 100%;
-        width: 100%;
+        
 
         background: url("../images/video_1.jpg") no-repeat center 50% fixed;
         -webkit-background-size: cover; 
@@ -13,6 +13,8 @@
     }
     
     .container {
+        width: 80%;
+        margin: 0 auto;
         padding-top: 30px;
     }
 
@@ -53,4 +55,15 @@
             border-radius: 15px; 
             
             */
+    }
+
+
+    .img_test{
+        width: 100%;
+    }
+    .thumbnail{
+        margin: 4px;
+    }
+    .video_list:hover{
+        background-color: rgba(200, 200, 200, 0.8);
     }
