@@ -1,5 +1,5 @@
 body {
-    background: url("../images/music_2.jpg") no-repeat center center fixed;
+    background: url("../images/music_2.jpg") no-repeat center 50% fixed;
     -webkit-background-size: cover; 
     -moz-background-size: cover; 
     -o-background-size: cover; 
