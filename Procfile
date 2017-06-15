@@ -1,0 +1,1 @@
+web: gunicorn afant_portfolio.wsgi --log-file -
