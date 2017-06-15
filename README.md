@@ -27,6 +27,8 @@
 + Make gallery form.
 + Vimeo API Test.
 
+### 2017.06.15
++ Modify home page design.
 
 
 

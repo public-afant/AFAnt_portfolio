@@ -3,10 +3,20 @@
 {% extends "blog/layout.html" %}
 {% block content %}
 {% load staticfiles %}
+<style>
+    .img_size {
+        min-width: 200px;
+        width: 10%;
+
+    }
+</style>
 
 <link rel="stylesheet" type="text/css" href="{% static 'blog/style/home_style.css' %}" />
 <div class="area">
     <div class="home_detail">
+        <img src="{% static 'blog/images/home_img.png' %}" class="img_size" >
+        <h1>Are you hiring?</h1>
+        <h2>Here's a healthy youth developer!</h2>
         <h3>AFANT</h3>
         (A Free & Auto Focus)
     </div>

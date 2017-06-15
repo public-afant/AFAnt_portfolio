@@ -8,13 +8,12 @@ body {
     background-size: cover; 
     padding-top: 35px;
     background-color: #000000;
-    height: 1300px;
 }
 .navbar {
     margin-bottom: 0px;
 }
 .home_detail {
-        padding-top: 100px; 
+        padding-top: 30px; 
         margin-left: auto;
         margin-right: auto;
         text-align: center;
