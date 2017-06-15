@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ["192.168.0.2", "localhost","wh9721.iptime.org","afant.heroku.com"]
+ALLOWED_HOSTS = ["192.168.0.2", "localhost","wh9721.iptime.org","afant.herokuapp.com"]
 
 
 # Application definition
