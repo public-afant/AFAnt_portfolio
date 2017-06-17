@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'blog/style/video_style.css' %}" /> 
 <style>
     .layer {
-        width: 80%;
+        width: 60%;
         position: absolute;
         top:60px;
         background: rgba(0, 0, 0, 0.8);
@@ -25,14 +25,17 @@
         var video_top = (scroll_result+60);
         $(".layer").css('top',video_top+'px');
     }
+    
     function video_rm(){
         $('body').find(".layer").remove();
+        $('body').find(".detail_view").remove();
     }
+
     function video_tag(key){
         video_rm();
-        
+
         var video_url = "https://player.vimeo.com/video/"+key;
-        $('body').append('<div class="container"><div class="layer"><input type="image" src="{% static "blog/images/close.png" %}"'+
+        $('body').append('<div class="container detail_view"><div class="layer"><input type="image" src="{% static "blog/images/close.png" %}"'+
         ' onclick="javascript:video_rm(); " class="button_img" /><br> <div class="embed-responsive embed-responsive-16by9"> '+
             '<iframe class="embed-responsive-item" src='+video_url+'></iframe></div></div></div>');
         layer_scroll();
@@ -75,15 +78,3 @@
 
 
 {% endblock %}
-
-<!--
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/221218190?title=0&byline=0&portrait=0"></iframe>
-</div>
-
-"https://player.vimeo.com/video/{{ video.video_key }}"
-
-http://vimeo.com/api/v2/video/{key_id}.xml
--->
-
-
