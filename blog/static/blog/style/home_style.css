@@ -9,15 +9,56 @@ body {
     padding-top: 35px;
     background-color: #000000;
 }
+
 .navbar {
     margin-bottom: 0px;
 }
+
 .home_detail {
-        padding-top: 30px; 
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
+    padding-top: 30px; 
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
+
+.img_size {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 400px;
+    min-width: 200px;
+    width: 30%;
+}
+
+.card_margin{
+    margin: 20px auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 35px 5px 35px 5px;
+}
+
+.img_icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-title{
+    text-align: center;
+}
+
 .area {
     height: 100%;
+}
+
+@media (min-width: 992px){
+    .container {
+        width: 770px;
+    }
+}
+@media (min-width: 768px){
+    .container {
+        width: 750px;
+    }
 }

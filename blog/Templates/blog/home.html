@@ -4,22 +4,54 @@
 {% block content %}
 {% load staticfiles %}
 <style>
-    .img_size {
-        min-width: 200px;
-        width: 10%;
-
-    }
+    
 </style>
 
 <link rel="stylesheet" type="text/css" href="{% static 'blog/style/home_style.css' %}" />
 <div class="area">
     <div class="home_detail">
+        
         <img src="{% static 'blog/images/home_img.png' %}" class="img_size" >
         <h1>Are you hiring?</h1>
         <h2>Here's a healthy youth developer!</h2>
-        <h3>AFANT</h3>
-        (A Free & Auto Focus)
+        
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="card card_margin" style="width: 20rem;">
+                    <img class="card-img-top img_icon" src="{% static 'blog/images/icons/develop.png' %}" >
+                    <div class="card-block">
+                        <h4 class="card-title">Healthy <br> Developer</h4>
+                        <p class="card-text">고객에게는 쓰고싶은 서비스를, 협업하는 동료에게는 좋은 코드를 나누고 싶은 개발자입니다. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="card card_margin" style="width: 20rem;">
+                    <img class="card-img-top img_icon" src="{% static 'blog/images/icons/skill_up1.png' %}" >
+                    <div class="card-block">
+                        <h4 class="card-title">Continuous learning</h4>
+                        <p class="card-text">개발 환경과 플랫폼, 언어에 자유로운 개발자가 되기 위하여 끊임없이 학습하고 있습니다. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="card card_margin" style="width: 20rem;">
+                    <img class="card-img-top img_icon" src="{% static 'blog/images/icons/auto_focus.png' %}" >
+                    <div class="card-block">
+                        <h4 class="card-title">Auto <br> Focus</h4>
+                        <p class="card-text">능동적인 사람을 찾으시나요? <br> 상황, 환경 그리고 요구에 따라 스스로 선택과 집중을 잘합니다. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+
 
 {% endblock %}

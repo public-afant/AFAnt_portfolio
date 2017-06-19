@@ -6,18 +6,29 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'blog/style/video_style.css' %}" /> 
 <style>
-    .layer {
-        width: 60%;
-        position: absolute;
-        top:60px;
-        background: rgba(0, 0, 0, 0.8);
-        border: 2px solid white;
+    @media only screen
+        and (min-width : 460px)  
+        and (max-width : 712px) {  
+        .container {
+            width: 330px;
+        }
     }
-    .button_img {
-        width: 15px;
-        margin: 15px;
-        align-content: right;
+    @media only screen
+        and (min-width : 713px)  
+        and (max-width : 1024px) {  
+        .container {
+            width: 750px;
+        }
     }
+    
+    /* Desktops and laptops */
+    @media only screen
+        and (min-width : 1050px) {  
+        .container {
+            width: 1055px;
+        }
+    }
+
 </style>
 <script>
     function layer_scroll(){
@@ -60,21 +71,29 @@
 
 
 
+
 <div class="container">
     <div class="row video_box">
             {% for video in video_list %}
-                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 video_list">
-                    <a href="javascript:;" onclick="video_tag('{{ video.video_key }}');" target="_blink" class="thumbnail test">
-                            <script>
-                               document.write("<img src="+test('{{ video.video_key }}')+" class='img-rounded img_test'>");
-                            </script>
-                    </a>
-                    <h5>{{ video.video_title }}</h5
-                    <p>{{ video.video_content }}</p>
-                </div>
+            <div class="col-6 col-xs-12 col-sm-4 col-md-4 col-lg-4 video_list">
+                <a href="javascript:;" onclick="video_tag('{{ video.video_key }}');" target="_blink" class="thumbnail test">
+                        <script>
+                            document.write("<img src="+test('{{ video.video_key }}')+" class='img-rounded img_test'>");
+                        </script>
+                </a>
+                <h5>{{ video.video_title }}</h5
+                <p>{{ video.video_content }}</p>
+            </div>
+
             {% endfor %}
     </div>
 </div>
 
 
 {% endblock %}
+
+
+<!--
+
+
+                -->
