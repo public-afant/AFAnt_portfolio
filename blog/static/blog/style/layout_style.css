@@ -1,7 +1,10 @@
-body {
-    padding-top: 70px;
+html,body {
+    height: 100%;
             
     }
+body {
+    padding-top: 70px;
+}
 
 .str_af {
     font-size: 120%;
@@ -14,9 +17,7 @@ body {
 .container-fluid {
     margin: auto;
 }
-footer{
-    padding: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.footer{
+    height: 50px;
     text-align: center;
 }

@@ -48,8 +48,8 @@ body {
     text-align: center;
 }
 
-.area {
-    height: 100%;
+.content {
+    min-height: 100%;
 }
 
 @media (min-width: 992px){

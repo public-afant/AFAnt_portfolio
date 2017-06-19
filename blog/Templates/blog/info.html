@@ -6,6 +6,7 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'blog/style/info_style.css' %}" /> 
 
+<div class="content">
 {% for info in info_list %}
     <div class="container info_main">
         <div class="row info_list">
@@ -50,6 +51,7 @@
         </div>
     </div>
 {% endfor %}
+</div>
 
 
 {% endblock %}

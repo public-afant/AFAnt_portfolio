@@ -6,35 +6,35 @@
 {% load staticfiles %}
 {% for info in info_list %}
 
-<style>
-    
-</style>
 <link rel="stylesheet" type="text/css" href="{% static 'blog/style/contact_style.css' %}" />
-<div class="contact_box">
-    <div class="contact_main">
-        <div class="contact_hole"></div>
-        <div class="contact_top">
-            <img src="{% static 'blog/images/home_img.png' %}" class="img_size" >
-        </div>
-        <div class="contact_bottom">
-            <div class="contact_list">
-                <h2>{{ info.name_kr }}</h2>
-                <h3>{{ info.name_eng }}</h3>
-                <h4>{{ info.email }}</h4> 
-                <h5>{{ info.location }}</h5>
-            </div>
 
-            <div class="contact_list contact_text">
-                <a href="https://github.com/wh9721" target="_blank">
-                    <img width="35px" src="{% static 'blog/images/icon_github.png' %}" />
-                </a>
-                <a href="" target="_blank">
-                    <img width="35px" src="{% static 'blog/images/icon_facebook.png' %}" />
-                </a>
+<div class="content">
+    <div class="contact_box">
+        <div class="contact_main">
+            <div class="contact_hole"></div>
+            <div class="contact_top">
+                <img src="{% static 'blog/images/home_img.png' %}" class="img_size" >
             </div>
+            <div class="contact_bottom">
+                <div class="contact_list">
+                    <h2>{{ info.name_kr }}</h2>
+                    <h3>{{ info.name_eng }}</h3>
+                    <h4>{{ info.email }}</h4> 
+                    <h5>{{ info.location }}</h5>
+                </div>
 
-            <div class="contact_list contact_text" style="margin-top: 0px;">
-                I'm a healthy youth developer.
+                <div class="contact_list contact_text">
+                    <a href="https://github.com/wh9721" target="_blank">
+                        <img width="35px" src="{% static 'blog/images/icon_github.png' %}" />
+                    </a>
+                    <a href="" target="_blank">
+                        <img width="35px" src="{% static 'blog/images/icon_facebook.png' %}" />
+                    </a>
+                </div>
+
+                <div class="contact_list contact_text" style="margin-top: 0px;">
+                    I'm a healthy youth developer.
+                </div>
             </div>
         </div>
     </div>
