@@ -3,6 +3,12 @@
 {% extends "blog/layout.html" %}
 {% block content %}
 
+<script>
+    var converter = new showdown.Converter(),
+    text = '##test!!!',
+    html = converter.makeHtml(text);
+    alert(html);
+</script>
 <style>
     .align_text {
         text-align: center;
