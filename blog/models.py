@@ -26,3 +26,16 @@ class Video(models.Model):
 
     def __str__(self):
         return self.video_title
+
+
+class Dev(models.Model):
+    dev_title = models.CharField(max_length = 50, default="필수 요소 입니다.")
+    dev_git_link = models.CharField(max_length = 50, default="No link.")
+    dev_summary = models.TextField(default="프로젝트 요약을 작성해야 합니다.")
+    dev_content = models.TextField(default="MarkDown 형식에 맞추어 작성해야 합니다.")
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
+
+
+    def __str__(self):
+        return self.dev_title

@@ -2,23 +2,115 @@
 
 {% extends "blog/layout.html" %}
 {% block content %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/style/portfolio_style.css' %}" />
 
 <script>
-    var converter = new showdown.Converter(),
-    text = '##test!!!',
-    html = converter.makeHtml(text);
-    alert(html);
+    function md_to_html(data){
+        var md = new Array();
+        md = data.split('<br />');
+        for(i=0; i<md.length; i++){
+            console.log(md[i]);
+            var converter = new showdown.Converter(),
+                text = md[i],
+                html = converter.makeHtml(text);
+                $('.md').append(html);
+        }
+    }
+    /* ------------------------------------------------- */
+
+    function layer_scroll(){
+        var scroll_result = $(window).scrollTop();
+        var dev_top = (scroll_result+60);
+        $(".layer").css('top',dev_top+'px');
+    }
+    
+    function dev_rm(){
+        $('body').find(".layer").remove();
+        $('body').find(".detail_view").remove();
+    }
+
+    function dev_tag(data, link){
+        console.log(data);
+        dev_rm();
+        $('.content').append('<div class="detail_view container"><div class="test"><input type="image" src="{% static "blog/images/close.png" %}"'+
+        ' onclick="javascript:dev_rm(); " class="button_img" /><h5><a href="'+link+'" target="_blank">GitHub</a></h5></div> <div class="md"></div>  </div>');
+        md_to_html(data);
+        //layer_scroll();
+    }
 </script>
+
 <style>
     .align_text {
         text-align: center;
     }
+    @media (min-width: 992px){
+        .container {
+            width: 770px;
+        }
+    }
+    @media (min-width: 768px){
+        .container {
+            width: 750px;
+        }
+    }
+
+
+
+    .container {
+        width: 90%;
+        max-width: 800px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .content {
+        min-height: 100%;
+    }
+
+    .detail_view {
+        padding: 30px;
+        margin-top:30px;
+        background: rgba(0, 0, 0, 0.8);
+    }
+    .button_img {
+        width: 15px;
+        margin: 15px;
+        align-content: right;
+    }
+    .test {
+        width: 100%;
+        display: block;
+    }
+    .card_margin{
+        margin: 20px auto;
+        padding: 10px;
+    }
 </style>
+
 <div class="content">
-    <div class="align_text">
-        <h3>페이지 준비중입니다.</h3>
-        빠른 시일 내로 준비를 마치겠습니다.
+    <div class="container">
+            {% for dev in dev_list %}
+            <div class="col-6 col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="card card_margin" style="width: 20rem;">
+                    <div class="card-block">
+                        <h5 class="card-title">
+                            <a href="javascript:;" onclick='dev_tag("{{ dev.dev_content | linebreaksbr }}","{{ dev.dev_git_link }}");' > 
+                                {{ dev.dev_title }}
+                            </a>
+                        </h5>
+                        <p class="card-text">{{ dev.dev_summary }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %} 
     </div>
 </div>
 
 {% endblock %}
+
+<!-- 
+<script>
+                md_to_html('{{ dev.dev_content | linebreaksbr }}');
+            </script>
+
+             md_to_html("'  +  data  +  '"); 
+-->
