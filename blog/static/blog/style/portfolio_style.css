@@ -6,4 +6,48 @@ html, body{
     -o-background-size: cover; 
     background-size: cover; 
     background-color: #000000;
+}
+
+.align_text {
+    text-align: center;
+}
+@media (min-width: 992px){
+    .container {
+        width: 770px;
     }
+}
+@media (min-width: 768px){
+    .container {
+        width: 750px;
+    }
+}
+
+
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.content {
+    min-height: 100%;
+}
+
+.detail_view {
+    padding: 30px;
+    margin-top:30px;
+    background: rgba(0, 0, 0, 0.8);
+}
+.button_img {
+    width: 15px;
+    margin: 15px;
+    align-content: right;
+}
+.test {
+    width: 100%;
+    display: block;
+}
+.card_margin{
+    margin: 20px auto;
+    padding: 10px;
+}
