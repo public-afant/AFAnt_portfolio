@@ -32,5 +32,8 @@
 + Deploy as heroku.
 + Restore data.
 
-### 2017.19~20
+### 2017.06.19~20
 + Create portfolio page.
+
+### 2017.06.21
++ Add Google analytics.
