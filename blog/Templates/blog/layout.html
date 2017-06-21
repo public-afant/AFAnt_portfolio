@@ -5,12 +5,6 @@
 
 <html>
     <head>
-        {% if GOOGLE_ANALYTICS_PROPERTY_ID %}
-            {% include "blog/ga.html" %}
-            <script>
-                console.log("google_analytics_property_id!!!");
-            </script>
-        {% endif %}
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="{% static 'blog/style/layout_style.css' %}" /> 
@@ -66,7 +60,7 @@
 
             ga('create', 'UA-101448277-1', 'auto');
             ga('send', 'pageview');
-            
+
         </script>
     </head>
     <body>
