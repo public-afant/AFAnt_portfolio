@@ -33,4 +33,4 @@
 + Restore data.
 
 ### 2017.19~20
-+ Create portfolio page
++ Create portfolio page.
