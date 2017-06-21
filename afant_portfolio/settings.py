@@ -62,7 +62,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'afant_portfolio.context_processors.google_analytics.google_analytics',
             ],
         },
     },
@@ -126,6 +125,3 @@ USE_TZ = True
 STATIC_URL = '/app/blog/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-101448277-1'
-GOOGLE_ANALYTICS_DOMAIN = 'afant.herokuapp.com'
