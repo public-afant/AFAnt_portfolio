@@ -37,3 +37,6 @@
 
 ### 2017.06.21
 + Add Google analytics.
+
+### 2017.06.29
++ Test Google Analytics.
