@@ -28,7 +28,7 @@
         layer_scroll();
     }
 
-    function test(key){        
+    function getVimeoKey(key){        
         var vi_key;
 
         var vimeo_json = "https://vimeo.com/api/v2/video/"+key+".json";
@@ -52,7 +52,8 @@
                 <div class="col-6 col-xs-12 col-sm-4 col-md-4 col-lg-4 video_list">
                     <a href="javascript:;" onclick="video_tag('{{ video.video_key }}');" target="_blink" class="thumbnail test">
                             <script>
-                                document.write("<img src="+test('{{ video.video_key }}')+" class='img-rounded img_test'>");
+                                document.write("<img src="+getVimeoKey('{{ video.video_key }}')+
+                                " class='img-rounded img_test'>");
                             </script>
                     </a>
                     <h5>{{ video.video_title }}</h5
